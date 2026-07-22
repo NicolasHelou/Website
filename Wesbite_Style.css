@@ -11,6 +11,11 @@ h1{
     color: blue;
     font-size: 48px;
     text-align: center;
+    text-decoration: underline;
+}
+
+header{
+    background-color: crimson;
 }
 
 section{
@@ -44,4 +49,34 @@ h2{
 
 #about{
     background-color: grey;
+}
+
+#home{
+    background-color: yellow;
+}
+
+.resume-button-view{
+    background-color: blanchedalmond;
+    color:black;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight:bold;
+}
+
+.resume-button-view:hover{
+    background-color: purple;
+}
+
+.resume-button-download{
+    background-color: blanchedalmond;
+    color:black;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight:bold;
+}
+
+.resume-button-download:hover{
+    background-color: purple;
 }
