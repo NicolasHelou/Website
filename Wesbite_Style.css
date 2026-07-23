@@ -28,6 +28,7 @@ body{
 
 main{
     color: black;
+    margin-top: 15px;
 }
 
 h2{
@@ -36,7 +37,10 @@ h2{
 
 .navbar{
     background-color: white;
-    padding: 20px;
+    padding: 10px;
+    position:fixed;
+    top:0;
+    width:100%;
 }
 
 .navbar a{
@@ -55,7 +59,14 @@ h2{
     background-color: yellow;
 }
 
-.resume-button-view{
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    margin:20px;
+}
+
+.resume-button{
     background-color: blanchedalmond;
     color:black;
     padding: 12px 24px;
@@ -64,19 +75,7 @@ h2{
     font-weight:bold;
 }
 
-.resume-button-view:hover{
+.resume-button:hover{
     background-color: purple;
 }
 
-.resume-button-download{
-    background-color: blanchedalmond;
-    color:black;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight:bold;
-}
-
-.resume-button-download:hover{
-    background-color: purple;
-}
