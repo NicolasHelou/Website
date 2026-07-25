@@ -14,11 +14,11 @@ h1{
     text-decoration: solid;
 }
 
-
-
 section{
-    padding: 50px 10%;
+    padding: 30px 10%;
+    scroll-margin-top: 95px;
 }
+
 body{
     background-color: #f8fafc;
     font-family: Arial, Helvetica, sans-serif;
@@ -27,7 +27,8 @@ body{
 main{
     color: black;
     margin: auto;
-    max-width: 1200px;
+    max-width: 1500px;
+    margin-top:95px;
 }
 
 h2{
@@ -113,6 +114,43 @@ img{
 
 ul1{
     list-style-type: disc;
-    gap: 15px;
+    gap: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+@media (max-width: 768px){
+    ul{
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+    ul1{
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+    .experiments{
+        flex-direction: column;
+        align-items: center;
+    }
+    .godot-screenshots{
+        flex-direction: column;
+        align-items: center;
+    }
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .button-group{
+        flex-direction: column;
+    }
+    section{
+        scroll-margin-top:200px;
+        padding:30px 20px;
+    }
+    main{
+        margin-top:200px;
+    }
+}
