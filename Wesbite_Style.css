@@ -17,6 +17,7 @@ h1{
 section{
     padding: 30px 10%;
     scroll-margin-top: 95px;
+    animation:fadeIn .6s ease;
 }
 
 body{
@@ -101,8 +102,8 @@ h2{
 }
 
 .godot-screenshots{
-    display: flexbox;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     gap:20px;
 }
 
@@ -116,6 +117,40 @@ ul1{
     list-style-type: disc;
     gap: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.project-card{
+    background: white;
+    border-radius: 12px;
+    padding:30px;
+    margin-bottom:40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+#home{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+}
+
+#about{
+    background: lightgray;
+}
+
+#projects{
+    background: white;
+}
+
+#certifications{
+    background: lightgray;
+}
+
+#contact{
+    background: white;
 }
 
 @media (max-width: 768px){
@@ -134,8 +169,7 @@ ul1{
         align-items: center;
     }
     .godot-screenshots{
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
     }
     h1{
         font-size: 36px;
