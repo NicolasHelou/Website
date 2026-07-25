@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="Wesbite_Style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
+<script src="script.js"></script>
+
 <body>
     <header>
         <nav class="navbar">
@@ -16,6 +19,7 @@
             <li><a href = "#about">About</a></li>
             <li><a href = "#projects">Projects</a></li>
             <li><a href = "#certifications">Certifications</a></li>
+            <li><a href = "#cybersecurity">Security Lab</a></li>
             <li><a href = "#contact">Contact</a></li>
         </ul>
         </nav>
@@ -122,6 +126,23 @@
                         Google AI Professional
                     </a>
                 </div>
+            </section>
+            <section id="cybersecurity">
+                <h2>Security Lab</h2>
+                <div class="cybersec-proj">
+                    <h3>Password Strength Checker</h3>
+                    <p>Enter a password to check its strength. The password will be analyzed locally in your browser and will not be stored or transmitted</p>
+                    <input
+                    type="password"
+                    id="passwordInput"
+                    placeholder="Enter a password">
+                    <button onclick="checkPassword()">
+                        Check Password        
+                    </button>
+                    <p id="passwordResult"></p>
+                    <p id="passwordReason"></p>
+                </div>
+                <p>More Coming Soon</p>
             </section>
             <section id="contact">
                 <h2>Contact Info</h2>
