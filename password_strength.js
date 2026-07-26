@@ -8,21 +8,27 @@ function checkPassword(){
     let pmini = false;
     let pnumber = false;
     let pspecial = false;
-    if (password.length >= 8)
+    let reasons = [];
+    if (password.length >= 8){
         score++;
         plength = true;
-    if(/[A-Z]/.test(password))
+    }
+    if(/[A-Z]/.test(password)){
         score++;
         pcaptial = true;
-    if(/[a-z]/.test(password))
+    }
+    if(/[a-z]/.test(password)){
         score++;
         pmini = true;
-    if(/[0-9]/.test(password))
+    }
+    if(/[0-9]/.test(password)){
         score++;
         pnumber = true;
-    if(/[!@#$%^&*(),.{}|<>]/.test(password))
+    }
+    if(/[!@#$%^&*(),.{}|<>]/.test(password)){
         score++;
         pspecial = true;
+    }
     if(score <= 2){
         result.textContent = "Weak Password";
         result.style.color = "red";
@@ -36,23 +42,19 @@ function checkPassword(){
         result.style.color = "green";
     }
     if(plength == false){
-        reason.textContent = "Password shorter than 8 characters";
-        reason.style.color = "red";
+        reasons.push("Password shorter than 8 characters.");
     }
     if(pcaptial == false){
-        reason.textContent = "Password does not utilize any capital letters";
-        reason.style.color = "red";
+        reasons.push("Password does not utilize any capital letters.");
     }
     if(pmini == false){
-        reason.textContent = "Password does not utilize any lowercase letters";
-        reason.style.color = "red";
+        reasons.push("Password does not utilize any lowercase letters.");
     }
     if(pnumber == false){
-        reason.textContent = "Password does not utilize any numbers";
-        reason.style.color = "red";
+        reasons.push("Password does not utilize any numbers.");
     }
     if(pspecial == false){
-        reason.textContent = "Password does not utilize any special characters";
-        reason.style.color = "red";
+        reasons.push("Password does not utilize any special characters.");
     }
+    reason.innerHTML = reasons.join("<br>");
 }
