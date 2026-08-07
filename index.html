@@ -9,6 +9,7 @@
 </head>
 
 <script src="password_strength.js"></script>
+<script src="password_generator.js"></script>
 
 <body>
     <header>
@@ -141,6 +142,33 @@
                     </button>
                     <p id="passwordResult"></p>
                     <p id="passwordReason"></p>
+                    <h3>Password Generator</h3>
+                    <p>Automatically Generate a Secure Password</p>
+                    <p>Remember, the most secure passwords use length, lowercase, uppercase, numbers and symbols</p>
+                    <p>Generated passwords will not be saved</p>
+                    <label for="passwordLength">Password Length:</label>
+                    <input
+                        type="number"
+                        id="passwordLength"
+                        min="8"
+                        max="64"
+                        value="16">
+                    <div class="options">
+                        <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+                        <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+                        <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                        <label><input type="checkbox" id="symbols" checked> Symbols</label>
+                    </div>
+                    <button onclick="generatePassword()">
+                        Generate Password
+                    </button>
+                    <input
+                        type="text"
+                        id="generatedPassword"
+                        readonly>
+                    <button onclick="copyPassword()">
+                        Copy Password
+                    </button>
                 </div>
                 <p>More Coming Soon</p>
             </section>
