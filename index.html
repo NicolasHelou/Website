@@ -10,6 +10,7 @@
 
 <script src="password_strength.js"></script>
 <script src="password_generator.js"></script>
+<script src="xss_simulation.js"></script>
 
 <body>
     <header>
@@ -129,7 +130,7 @@
                 </div>
             </section>
             <section id="cybersecurity">
-                <h2>Security Lab</h2>
+                <h2>Security Labs</h2>
                 <div class="cybersec-proj">
                     <h3>Password Strength Checker</h3>
                     <p>Enter a password to check its strength. The password will be analyzed locally in your browser and will not be stored or transmitted</p>
@@ -169,6 +170,27 @@
                     <button onclick="copyPassword()">
                         Copy Password
                     </button>
+                    <h3>XSS Preventation Demo</h3>
+                    <p>
+                        Enter text below to see input 
+                        validation in practice.
+                    </p>
+                    <p>
+                        This script is purely a detection simulation.
+                        Try adding "javascript:", "onerror=" or "onclick="
+                        to showcase XSS detection.
+                    </p>
+                    <input
+                    type="text"
+                    id="xssInput"
+                    placeholder="Enter text or an XSS payload">
+                    <button onclick="testXSS()">
+                        Test Input
+                    </button>
+                    <h4>Input:</h4>
+                    <p id="xssInputDisplay"></p>
+                    <h4>Security Analysis:</h4>
+                    <p id="xssResult"></p>
                 </div>
                 <p>More Coming Soon</p>
             </section>
