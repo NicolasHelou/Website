@@ -120,6 +120,11 @@ h2{
     gap:20px;
 }
 
+.n8n_screenshots{
+    display:flex;
+    justify-content: space-evenly;
+}
+
 img{
     max-width: 100%;
     height:auto;
