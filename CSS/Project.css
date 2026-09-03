@@ -1,0 +1,15 @@
+.project-card{
+    background: white;
+    border-radius: 12px;
+    padding:30px;
+    margin-bottom:40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.cybersec-proj{
+    background: white;
+    padding:25px;
+    border-radius: 12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    margin-bottom: 30px;
+}

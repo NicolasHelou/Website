@@ -14,8 +14,31 @@ section{
     background: white;
 }
 
+.hero h2{
+    font-size: clamp(40px, 7vw, 80px);
+    margin-bottom: 10px;
+}
+
+.hero-label{
+    font-size: clamp(20px, 7vw, 40px);
+}
+
 #about{
     background: lightgray;
+}
+
+.about-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.about-card{
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0,0,0,.05);
 }
 
 #projects{
