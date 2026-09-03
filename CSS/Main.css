@@ -1,0 +1,63 @@
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: space-evenly;
+}
+
+h1{
+    color: black;
+    font-size: 48px;
+    text-align: center;
+    text-decoration: solid;
+    font-weight: 700;
+}
+
+h2,h3{
+    font-weight:700;
+}
+
+p{
+    line-height: 1.7;
+}
+
+body{
+    background-color: #f8fafc;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    color: black;
+    margin: auto;
+    max-width: 1500px;
+    margin-top:95px;
+}
+
+h2{
+    font-size: 36px;
+}
+
+ul1{
+    list-style-type: disc;
+    gap: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.project-card{
+    background: white;
+    border-radius: 12px;
+    padding:30px;
+    margin-bottom:40px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.08);
+}
+
+.cybersec-proj{
+    background: white;
+    padding:25px;
+    border-radius: 12px;
+    box-shadow:0 4px 12px rgba(0,0,0,.1);
+    margin-bottom: 30px;
+}
+

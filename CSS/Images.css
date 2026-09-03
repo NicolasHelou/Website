@@ -1,0 +1,21 @@
+.experiments{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.godot-screenshots{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+}
+
+.n8n_screenshots{
+    display:flex;
+    justify-content: space-evenly;
+}
+
+img{
+    max-width: 100%;
+    height:auto;
+    border-radius: 10px;
+}

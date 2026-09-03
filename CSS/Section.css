@@ -1,0 +1,35 @@
+section{
+    padding: 30px 10%;
+    scroll-margin-top: 95px;
+    animation:fadeIn .6s ease;
+}
+
+#home{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: white;
+}
+
+#about{
+    background: lightgray;
+}
+
+#projects{
+    background: white;
+}
+
+#certifications{
+    background: lightgray;
+}
+
+#contact{
+    background: lightgrey;
+}
+
+#cybersecurity{
+    background: white;
+}

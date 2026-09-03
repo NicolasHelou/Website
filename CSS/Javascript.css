@@ -1,0 +1,27 @@
+#passwordResult{
+    font-weight:bold;
+    margin-top:20px;
+}
+
+#passwordInput{
+    padding:12px;
+    width:300px;
+    border-radius: 8px;
+    border:1px solid #ccc;
+}
+
+.options{
+    display:flex;
+    gap:15px;
+    flex-wrap: wrap;
+    margin:15px 0;
+}
+
+#generatedPassword{
+    width:100%;
+    padding:12px;
+    margin:15px 0;
+    font-family: monospace;
+    font-size: 18px;
+}
+

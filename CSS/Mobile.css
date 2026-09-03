@@ -1,0 +1,32 @@
+@media (max-width: 768px){
+    ul{
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+    ul1{
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+    .experiments{
+        flex-direction: column;
+        align-items: center;
+    }
+    .godot-screenshots{
+        grid-template-columns: 1fr;
+    }
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .button-group{
+        flex-direction: column;
+    }
+    
+    main{
+        margin-top:200px;
+    }
+}

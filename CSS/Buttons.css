@@ -1,0 +1,43 @@
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    margin:20px;
+}
+
+.resume-button{
+    background-color: #2563eb;
+    color:black;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight:bold;
+    transition: 0.3s;
+}
+
+.resume-button:hover{
+    background-color: purple;
+    transform:translateY(-3px);
+}
+
+.certificate:hover{
+    color:black;
+    background-color: #2563eb;
+    transform:translateY(-3px);
+}
+
+.certifications-group{
+    display: flex;
+    justify-content: center;
+    gap:20px;
+    margin:20px;
+}
+
+.certificate{
+    background-color: white;
+    padding:12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
