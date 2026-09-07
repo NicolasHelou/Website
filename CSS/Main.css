@@ -5,6 +5,10 @@ main{
     margin-top:95px;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --background: #f8fafc
     --surface: #ffffff;
