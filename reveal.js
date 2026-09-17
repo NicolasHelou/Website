@@ -1,5 +1,4 @@
 const sections = document.querySelectorAll(".reveal");
-
 const observer = new IntersectionObserver(
     (entries) => {
         entries.forEach((entry) => {
