@@ -19,6 +19,7 @@
 <script src="password_generator.js"></script>
 <script src="xss_simulation.js"></script>
 <script src="reveal.js" defer></script>
+<script src="csrf_session.js"></script>
 
 <body>
     <header>
@@ -229,6 +230,85 @@
                     <p id="xssInputDisplay"></p>
                     <h4>Security Analysis:</h4>
                     <p id="xssResult"></p>
+                </div>
+                <div class="cybersec-proj">
+                    <h3>Session Security Simulation</h3>
+                    <p>This lab focuses on Cross-Site Request Forgery, insecure cookies and impact on web app security.</p>
+                    <div class="security-mod">
+                        <h4>CSRF Protection</h4>
+                        <p>This section will simulate a malicious request attempting to transfer money from an authenticated user.</p>
+                        <div class="sim-box">
+                            <p><strong>Authenticated:</strong> Yes</p>
+                            <p><strong>CSRF Token::</strong>
+                                <span id="csrfTokenStatus"> Missing</span>
+                            </p>
+                            <button onclick="simulateCSRF(false)">
+                                Simulate Vulnerable Request
+                            </button>
+                            <button onclick="simulateCSRF(true)">
+                                Simulate Protected Request
+                            </button>
+                            <div id="csrfResult" class="sec-result">
+                                Waiting for simulation
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="security-mod">
+                        <h4>Secure Cookie Config</h4>
+                        <p>Configure attributes of fictional session cookie.</p>
+                        <div class="cookie-config">
+                            <label>
+                                <input type="checkbox" id="secureCookie">
+                                Secure
+                            </label>
+                            <label>
+                                <input type="checkbox" id="httpOnlyCookie">
+                                HttpOnly
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="sameSiteCookie">
+                                SameSite=Strict
+                            </label>
+                        </div>
+                        <button onclick="checkCookieSecurity()">
+                            Analyze Cookie Config
+                        </button>
+                        <div id="cookieResult" class="sec-result">
+                            Configure the cookie above.
+                        </div>
+                    </div>
+                    <div class="security-mod">
+                        <h4>Session Hijacking Simulation</h4>
+                        <p>See what happens when an attacker obtains a valid session identifier.</p>
+                        <p>Rotate Session ID First to Set The User's Session ID.</p>
+                        <div class="session-display">
+                            <div class="session-user">
+                                <h5>USER</h5>
+                                <p>Session ID:</p>
+                                <strong id="userSession">A7F3-92C1</strong>
+                                <p id="userStatus">Authenticated</p>
+                            </div>
+                            <div class="session-arrow">
+                                → 
+                            </div>
+                            <div class="session-user attacker">
+                                <h5>ATTACKER</h5>
+                                <p>Session ID:</p>
+                                <strong id="attackerSession">None</strong>
+                                <p id="attackerStatus">Not authenticated</p>
+                            </div>
+                        </div>
+                        <button onclick="simulateHijacking()">
+                            Simulate Session Hijacking
+                        </button>
+                        <button onclick="rotateSession()">
+                            Rotate Session ID
+                        </button>
+                        <div id="sessionResult" class="sec-result">
+                            Session is secure.
+                        </div>
+                    </div>
                 </div>
                 <p>More Coming Soon</p>
             </section>
