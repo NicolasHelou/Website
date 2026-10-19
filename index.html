@@ -20,6 +20,7 @@
 <script src="xss_simulation.js"></script>
 <script src="reveal.js" defer></script>
 <script src="csrf_session.js"></script>
+<script src="log_analysis.js" defer></script>
 
 <body>
     <header>
@@ -307,6 +308,165 @@
                         </button>
                         <div id="sessionResult" class="sec-result">
                             Session is secure.
+                        </div>
+                    </div>
+                    <div class="cybersec-proj log-analysis-lab">
+                        <h3>Log Analysis & Incident Response</h3>
+                        <p>Investigate simulated security events, identify suspicious activity and practice responding to a potential account compromise</p>
+                        <div class="soc-dashboard">
+                            <div class="soc-stat">
+                                <h4>Security Events</h4>
+                                <p id="totalEvents">0</p>
+                            </div>
+                            <div class="soc-stat">
+                                <h4>Failed Logins</h4>
+                                <p id="incidentStatus">Uninvestigated</p>
+                            </div>
+                        </div>
+                        <div class="log-module">
+                            <h4>1. Security Event Log</h4>
+                            <p>Review recorded events, filter by severity to narrow investigation.</p>
+                            <label for="severityFilter">Filter by severity:</label>
+                            <select id="severityFilter">
+                                <option value="all">All Events</option>
+                                <option value="info">Informational</option>
+                                <option value="warning">Warning</option>
+                                <option value="high">High Severity</option>
+                            </select>
+                            <button type="button" id="resetLogFilter">
+                                Reset Filter
+                            </button>
+
+                            <div class="log-table-wrapper">
+                                <table class="log-table">
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                   <th>Event</th>
+                                   <th>Account</th>
+                                    <th>Source IP</th>
+                                    <th>Severity</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="logEntries">
+                            </tbody>
+                            </table>
+                            </div>
+                            <p id="logCount" aria-live="polite">
+                                Loading security events...
+                            </p>
+                            </div>
+                            <div class="log-module">
+
+                                <h4>2. Investigate the Incident</h4>
+
+                                <p>
+                                    Based on the available evidence, what is the most likely
+                                    explanation for the suspicious activity?
+                                </p>
+
+                            <div class="investigation-options">
+
+                                <label>
+                                <input type="radio" name="incidentChoice"
+                                value="normal">
+                                    Normal user activity with no reason for concern
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="incidentChoice"
+                                     value="compromise">
+                                        Possible account compromise following repeated
+                                        failed logins and a subsequent successful login
+                                </label>
+
+                            <label>
+                            <input type="radio" name="incidentChoice"
+                            value="ddos">
+                                A distributed denial-of-service attack
+                            </label>
+
+                            </div>
+
+                            <button type="button" id="submitInvestigation">
+                                Submit Investigation
+                            </button>
+
+                            <div id="investigationResult"
+                            class="log-result"
+                            aria-live="polite">
+                                Review the logs before submitting your conclusion.
+                            </div>
+
+                            </div>
+                            <div class="log-module">
+
+                            <h4>3. Incident Response</h4>
+
+                            <p>
+                                Assume the investigation provides sufficient evidence
+                                of a compromised account. Select the response actions
+                                you would take.
+                            </p>
+
+                            <div class="response-options">
+
+                            <label>
+                            <input type="checkbox" name="responseAction"
+                             value="disable">
+                                Temporarily disable or restrict the affected account
+                            </label>
+
+                            <label>
+                            <input type="checkbox" name="responseAction"
+                            value="revoke">
+                                Revoke active sessions and reset credentials securely
+                            </label>
+
+                            <label>
+                            <input type="checkbox" name="responseAction"
+                            value="preserve">
+                                Preserve relevant logs and document the timeline
+                            </label>
+
+                            <label>
+                            <input type="checkbox" name="responseAction"
+                            value="escalate">
+                                Escalate the incident according to the response plan
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="responseAction"
+                                    value="ignore">
+                                Ignore the activity because the account logged in successfully
+                            </label>
+
+                            </div>
+
+                            <button type="button" id="submitResponse">
+                                Evaluate Response
+                            </button>
+
+                            <div id="responseResult"
+                            class="log-result"
+                            aria-live="polite">
+                                Select your response actions to begin.
+                            </div>
+
+                            <button type="button" id="resetInvestigation">
+                                Restart Investigation
+                            </button>
+
+                            </div>
+
+                            <p class="lab-disclaimer">
+                                Educational simulation only. All events and IP addresses are
+                                fictional. No real accounts, systems, or network traffic are
+                                accessed or modified.
+                            </p>
+
+                        </div>
                         </div>
                     </div>
                 </div>

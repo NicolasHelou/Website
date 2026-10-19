@@ -13,3 +13,67 @@
     box-shadow:0 4px 12px rgba(0,0,0,.1);
     margin-bottom: 30px;
 }
+
+.log-analysis-lab {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.log-analysis-lab > h3 {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.log-analysis-lab > p {
+    line-height: 1.7;
+}
+
+
+/* ==========================================
+   SOC DASHBOARD
+   ========================================== */
+
+.soc-dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 25px 0;
+}
+
+.soc-stat {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.soc-stat:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.soc-stat h4 {
+    margin: 0 0 12px;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.soc-stat p {
+    margin: 0;
+    color: #0f172a;
+    font-size: 1.8rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+}
+
+#suspiciousEvents {
+    color: #dc2626;
+}
+
+#incidentStatus {
+    font-size: 1rem;
+    color: #d97706;
+}
